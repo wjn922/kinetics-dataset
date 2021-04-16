@@ -96,3 +96,10 @@ https://s3.amazonaws.com/kinetics/700_2020/annotations/ava_kinetics_v1_0.tar.gz
 To download annotations for countix:
 https://s3.amazonaws.com/kinetics/700_2020/annotations/countix.tar.gz
 
+
+# [Optional] Resize
+
+Resize the short side to 256 for efficiency.
+```
+python resize_video.py ori_train/ train/
+```
