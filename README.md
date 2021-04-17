@@ -103,3 +103,28 @@ Resize the short side to 256 for efficiency.
 ```
 python resize_video.py ori_train/ train/
 ```
+
+`ori_train`,`ori_val` are original videos before resize short edge to 256.
+
+`ori_train.csv` and `ori_val.csv` are original files from cvdfoundation, which contains some *bad* videos (not exist, damaged)
+
+
+# Clean 
+
+```
+val/*.mp4: 19881 (after tar extract) => 19877 (after resize to 256)
+
+val.csv (from cvdf): 19907 lines (include first title line)
+val.csv (after check pyav): 19878 lines (include first title line)
+
+
+train/*.mp4: 240258 (after tar extract) => 238796 (after resize to 256)
+train.csv (from cvdf): 246535 lines (include first title line)
+train.csv (after check pyav): 238797 lines (include first title line)
+
+```
+
+Get the processed `[train/val].csv` files from:
+```
+git clone https://gist.github.com/122273ab4d82fc2c11deaa32fa45b23d.git
+```
